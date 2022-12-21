@@ -37,7 +37,7 @@ function App() {
         <Route path="*" element="Page not exists 404" />
 
         {/* user protected routes: */}
-        <Route element={<ProtectedRoutesComponent />}>
+        <Route element={<ProtectedRoutesComponent admin={false} />}>
           <Route path="/user" element={<UserProfilePage />} />
           <Route path="/user/my-orders" element={<UserOrdersPage />} />
           <Route path="/user/cart-details" element={<UserCartDetailsPage />} />
@@ -48,7 +48,7 @@ function App() {
         </Route>
 
         {/* admin protected routes:  */}
-        <Route element={<ProtectedRoutesComponent />}>
+        <Route element={<ProtectedRoutesComponent admin={true} />}>
           <Route path="/admin/users" element={<AdminUsersPage />} />
           <Route path="/admin/edit-user" element={<AdminEditUserPage />} />
           <Route path="/admin/users" element={<AdminUsersPage />} />
