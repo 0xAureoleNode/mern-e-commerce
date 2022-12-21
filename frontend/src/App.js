@@ -1,4 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// components:
+import HeaderComponent from './components/HeaderComponent';
+import FooterComponent from './components/FooterComponent';
+
 import HomePage from './pages/HomePage';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
@@ -27,6 +32,7 @@ import AdminEditUserPage from './pages/admin/AdminEditUserPage';
 function App() {
   return (
     <BrowserRouter>
+      <HeaderComponent />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/cart" element={<CartPage />} />
@@ -70,6 +76,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
+      <FooterComponent />
     </BrowserRouter>
   );
 }
