@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import '../../chats.css';
 
 const UserChatComponent = () => {
@@ -19,7 +19,7 @@ const UserChatComponent = () => {
           <div className="cht-msg">
             {Array.from({ length: 20 }).map((_, id) => {
               return (
-                <div key={id}>
+                <Fragment key={id}>
                   <p>
                     <b>You wrote:</b>
                     Hello, World! This is a toast message.
@@ -28,7 +28,7 @@ const UserChatComponent = () => {
                     <b>Support Wrote:</b>
                     Hello, World! This is a toast message
                   </p>
-                </div>
+                </Fragment>
               );
             })}
           </div>
