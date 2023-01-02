@@ -27,28 +27,42 @@ const ProductDetailsPage = () => {
           <Row>
             <Col md={8}>
               <ListGroup variant="flush">
-                <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                <ListGroup.Item>
+                  <h1>Product Name</h1>
+                </ListGroup.Item>
                 <ListGroup.Item>
                   <Rating readonly size={20} initialValue={4} />
                 </ListGroup.Item>
-                <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                <ListGroup.Item>Porta ac consectetur</ListGroup.Item>
+                <ListGroup.Item>
+                  Price <span className="fw-bold">$345</span>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  Sure! Here's a product description for a fictional product
+                  called the "Garden Genie": Introducing the Garden Genie - the
+                  ultimate gardening tool for green thumbs and novice gardeners
+                  alike! With its smart sensor technology and easy-to-use
+                  design, the Garden Genie is the perfect companion for all your
+                  gardening needs.
+                </ListGroup.Item>
               </ListGroup>
             </Col>
             <Col md={4}>
-              <ListGroup variant="flush">
-                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup>
+                <ListGroup.Item>Status: in stock</ListGroup.Item>
                 <ListGroup.Item>
+                  Price: <span>$345</span>
+                </ListGroup.Item>
+                <ListGroup.Item>
+                  Quantity:
                   <Form.Select size="lg" aria-label="Default select example">
-                    <option>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option>1</option>
+                    <option value="1">2</option>
+                    <option value="2">3</option>
+                    <option value="3">4</option>
                   </Form.Select>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  <Button variant="danger">Danger</Button>
+                  <Button variant="danger">Add to Cart</Button>
                 </ListGroup.Item>
               </ListGroup>
             </Col>
@@ -85,7 +99,10 @@ const ProductDetailsPage = () => {
               <option value="2">Two</option>
               <option value="3">Three</option>
             </Form.Select>
-            <Button variant="primary">Primary</Button>
+
+            <Button variant="primary" className="mt-2">
+              Primary
+            </Button>
           </Form>
         </Col>
       </Row>
