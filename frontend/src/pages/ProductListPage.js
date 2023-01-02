@@ -30,8 +30,8 @@ const ProductListPage = () => {
               <AttributesFilterComponent />
             </ListGroup.Item>
             <ListGroup.Item>
-              <Button variant="primary">Primary</Button>
-              <Button variant="danger">Danger</Button>
+              <Button variant="primary">Filter</Button>
+              <Button variant="danger">Reset Filter</Button>
             </ListGroup.Item>
           </ListGroup>
         </Col>
