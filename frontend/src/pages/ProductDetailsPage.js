@@ -71,37 +71,38 @@ const ProductDetailsPage = () => {
             <Col className="mt-5">
               <h5>REVIEWS</h5>
               <ListGroup variant="flush">
-                <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                <ListGroup.Item>Morbi Leo risus</ListGroup.Item>
-                <ListGroup.Item>Morbi Leo risus</ListGroup.Item>
+                {Array.from({ length: 10 }).map((item, idx) => (
+                  <ListGroup.Item key={idx}>
+                    John Doe <br />
+                    <Rating readonly size={20} initialValue={4} /> <br />
+                    20-09-2001 <br />
+                    "I absolutely love this product! It has made a huge
+                    difference in my daily routine and I can't imagine life
+                    without it. The quality is top notch and it is so easy to
+                    use. I have already recommended it to all of my friends and
+                    family. Thank you for such a great product!"
+                  </ListGroup.Item>
+                ))}
               </ListGroup>
             </Col>
           </Row>
           <hr />
-          send review form
           <Alert variant="danger">Login first to write a review</Alert>
           <Form>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="name@example.com" />
-            </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
-              <Form.Label>Example textarea</Form.Label>
+              <Form.Label>Write A Review</Form.Label>
               <Form.Control as="textarea" rows={3} />
             </Form.Group>
             <Form.Select aria-label="Default select example">
-              <option>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="5">5 (very good)</option>
+              <option value="4">4 (good)</option>
+              <option value="3">3 (average)</option>
+              <option value="2">2 (bad)</option>
+              <option value="1">1 (awful)</option>
             </Form.Select>
 
-            <Button variant="primary" className="mt-2">
-              Primary
+            <Button variant="primary" className="mb-3 mt-3">
+              SUBMIT
             </Button>
           </Form>
         </Col>
