@@ -13,6 +13,16 @@ import { Link } from 'react-router-dom';
 const RegisterPage = () => {
   const [validated, setValidated] = useState(false);
 
+  const onChange = () => {
+    const password = document.querySelector('input[name=password]');
+    const confirm = document.querySelector('input[name=confirmPassword');
+    if (confirm.value === password.value) {
+      confirm.setCustomValidity('');
+    } else {
+      confirm.setCustomValidity('Password do not match');
+    }
+  };
+
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -76,9 +86,13 @@ const RegisterPage = () => {
                 placeholder="Password"
                 name="password"
                 minLength={6}
+                onChange={onChange}
               />
               <Form.Control.Feedback type="invalid">
-                Please Enter Password
+                Please Enter A Valid Password
+              </Form.Control.Feedback>
+              <Form.Control.Feedback type="text-muted">
+                Please Should have at least 6 characters
               </Form.Control.Feedback>
             </Form.Group>
             {/* Repeat Password */}
@@ -90,9 +104,13 @@ const RegisterPage = () => {
                 placeholder="Repeat Password"
                 name="confirmPassword"
                 minLength={6}
+                onChange={onChange}
               />
               <Form.Control.Feedback type="invalid">
                 Both Passwords should match
+              </Form.Control.Feedback>
+              <Form.Control.Feedback type="text-muted">
+                Please Should have at least 6 characters
               </Form.Control.Feedback>
             </Form.Group>
 
