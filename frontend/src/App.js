@@ -40,6 +40,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <HeaderComponent />
+
       <Routes>
         <Route element={<RoutesWithUserChatComponent />}>
           {/* publicly available routes: */}
@@ -87,6 +88,7 @@ function App() {
           <Route path="/admin/analytics" element={<AdminAnalyticsPage />} />
         </Route>
       </Routes>
+
       <FooterComponent />
     </BrowserRouter>
   );
