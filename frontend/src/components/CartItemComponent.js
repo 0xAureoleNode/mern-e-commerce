@@ -9,11 +9,11 @@ const CartItemComponent = () => {
           <Col md={2}>
             <Image
               crossOrigin="anonymous"
-              src="images/games-category.png"
+              src="/images/games-category.png"
               fluid
             />
           </Col>
-          <Col md={2}>Logotech Series Gaming Mouse</Col>
+          <Col md={2}>Logo tech Series Gaming Mouse</Col>
           <Col md={2}>
             <b>$89</b>
           </Col>
