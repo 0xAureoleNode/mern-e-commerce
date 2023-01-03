@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Container, Row, Col, Alert, ListGroup, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import CartItemComponent from '../components/CartItemComponent';
@@ -11,10 +11,10 @@ const CartPage = () => {
           <h1>Shopping Cart</h1>
           <ListGroup variant="flush">
             {Array.from({ length: 3 }).map((item, idx) => (
-              <>
-                <CartItemComponent key={idx} />
+              <Fragment key={idx}>
+                <CartItemComponent />
                 <br />
-              </>
+              </Fragment>
             ))}
           </ListGroup>
 
@@ -29,7 +29,7 @@ const CartPage = () => {
               Price: <span className="fw-bold">$892</span>
             </ListGroup.Item>
             <ListGroup.Item>
-              <LinkContainer to="/user/order-details">
+              <LinkContainer to="/user/cart-details">
                 <Button type="button">Proceed To Checkout</Button>
               </LinkContainer>
             </ListGroup.Item>
