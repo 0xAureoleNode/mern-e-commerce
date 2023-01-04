@@ -29,8 +29,6 @@ const AdminProductsPage = () => {
               <th>Price</th>
               <th>Category</th>
               <th>Edit/Delete</th>
-              <th>Payment Method</th>
-              <th>Order Details</th>
             </tr>
           </thead>
           <tbody>
@@ -49,17 +47,16 @@ const AdminProductsPage = () => {
                     <Button className="btn-sm">
                       <i className="bi bi-pencil-square"></i>
                     </Button>
-
-                    {' / '}
-
-                    <Button
-                      variant="danger"
-                      className="btn-sm"
-                      onClick={deleteHandle}
-                    >
-                      <i className="bi bi-pencil-square"></i>
-                    </Button>
                   </LinkContainer>
+                  {' / '}
+
+                  <Button
+                    variant="danger"
+                    className="btn-sm"
+                    onClick={deleteHandle}
+                  >
+                    <i className="bi bi-pencil-square"></i>
+                  </Button>
                 </td>
               </tr>
             ))}
